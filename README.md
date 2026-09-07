@@ -14,7 +14,7 @@ A JSONPath query engine for Haskell with RFC 9535 compliance and streaming evalu
 
 ## Quick Start
 
-\`\`\`haskell
+```haskell
 import Data.JSONPath
 
 main :: IO ()
@@ -22,7 +22,7 @@ main = do
   let json = "{\"store\":{\"books\":[{\"title\":\"Dune\",\"price\":12.99}]}}"
   let result = query "$..books[?@.price<15].title" json
   print result  -- ["Dune"]
-\`\`\`
+```
 
 ## License
 
